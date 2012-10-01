@@ -1,0 +1,5 @@
+<% File.open('notepad.txt', 'w'){ |f| f.write query["text"] } if query["text"] %>
+<html><body><center><form method=post>
+<textarea name="text" rows="4" cols="40"><%=IO.read('notepad.txt')%></textarea><br/>
+<input type="submit" name="update" value="Сохранить" />
+</form></center></body></html>
